@@ -1,0 +1,31 @@
+#+TITLE:	README for react-clojure
+#+AUTHOR:	Ewen Grosjean
+
+* React-clojure 
+React-clojure provide a clojure API to convert JSX data into javascript. 
+JSX is JavaScript XML syntax transform recommended for use with React.js.
+
+* Install
+
+React-clojure is not on public maven repositories yet.
+First, you must clone the repository and install the artifact locally.
+
+#+BEGIN_SRC shell
+git clone https://github.com/EwenG/flapjax-cljs
+lein install
+#+END_SRC
+
+Then, simply add react-clojure as a dependency to your project.clj.
+: [clj.react/react-clojure "0.0.1"]
+
+* Usage
+
+React-clojure currently provides only one function to transform JSX to Javascript.
+
+#+BEGIN_SRC clojure
+(html->jsx \"<html><body><div id=\"my-id\"></div></body></html>\")     ; \"/** @jsx React.DOM */ React.DOM.html(null, React.DOM.body(null, React.DOM.div( {id:\"my-id\"})))\""
+#+END_SRC
+
+* Licence
+
+Distributed under the Eclipse Public License, the same as Clojure.

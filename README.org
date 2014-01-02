@@ -2,6 +2,9 @@
 React-clojure provide a clojure API to convert JSX data into javascript. 
 JSX is JavaScript XML syntax transform recommended for use with React.js.
 
+Internally, react-clojure is just a wrapper around JSXTransformer.js and uses the Javascript engine provided by the JDK 6 libraries.
+I tried it on Oracle JDK only.
+
 * Install
 
 React-clojure is not on public maven repositories yet.

@@ -7,7 +7,7 @@ It has been tested on Oracle JDK only.
 
 * Install
 
-React-clojure is not on public maven repositories yet.
+React-clojure is not on a public maven repository yet.
 First, you must clone the git repository and install the artifact locally.
 
 #+BEGIN_SRC shell

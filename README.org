@@ -5,6 +5,8 @@ JSX is JavaScript XML syntax transform recommended for use with React.js.
 Internally, react-clojure is just a wrapper around JSXTransformer.js and uses the Javascript engine provided by the JDK 6 libraries.
 It has been tested on Oracle JDK only.
 
+Note that when used from a clojurescript macro, react-clojure may increase your clojurescript compilation time.
+
 * Install
 
 React-clojure is not on a public maven repository yet.
@@ -23,7 +25,7 @@ Then, simply add react-clojure as a dependency to your project.clj.
 React-clojure currently provides only one function to transform JSX to Javascript.
 
 #+BEGIN_SRC clojure
-(html->jsx \"<html><body><div id=\"my-id\"></div></body></html>\")     ; \"/** @jsx React.DOM */ React.DOM.html(null, React.DOM.body(null, React.DOM.div( {id:\"my-id\"})))\""
+(html->jsx "<html><body><div id=\"my-id\"></div></body></html>")     ; "/** @jsx React.DOM */ React.DOM.html(null, React.DOM.body(null, React.DOM.div( {id:\"my-id\"})))"
 #+END_SRC
 
 * Licence
